@@ -7,13 +7,34 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
+
 <h1>Alta cliente</h1>
-<div>
-  <p>Nombre: <input type="text" [(ngModel)]="nombre"></p>
-  <p>CIF: <input type="text" [(ngModel)]="cif"></p>
-  <p>Dirección: <input type="text" [(ngModel)]="direccion"></p>
-  <p>Grupo: <input type="text" [(ngModel)]="grupo"></p>
-  <button (click)="afegirclient()">Guardar</button>
+<div class="form-container">
+  <tr>
+    <td>Nombre:</td>
+    <td><input type="text" [(ngModel)]="nombre"></td>
+  </tr>
+  <tr>
+    <td>CIF:</td>
+    <td><input type="text" [(ngModel)]="cif"></td>
+  </tr>
+  <tr>
+    <td>Dirección:</td>
+    <td><input type="text" [(ngModel)]="direccion"></td>
+  </tr>
+  <tr>
+    <td>Grupo:</td>
+    <td>
+      <select [(ngModel)]="grupo">
+        <option value="Sin definir">Sin definir</option>
+        <option value="Grupo 1">Grupo 1</option>
+        <option value="Grupo 2">Grupo 2</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td><button (click)="afegirclient()">Guardar</button></td>
+  </tr>
 </div>
 
 <app-client [data]="clientes"></app-client>
